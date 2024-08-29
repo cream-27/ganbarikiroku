@@ -72,7 +72,7 @@ function App() {
           えらい {count}
         </button>
       </div>
-      <p className="read-the-docs">今日もお疲れ様でした.</p>
+      <p className="sub-message">今日もお疲れ様でした。</p>
     </>
   );
 }
