@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: "Kaisei Decol", serif;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Kaisei Decol", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  margin: 0 2em;
+}
+
+.message {
+  font-weight: 400;
+  font-size: 25px;
+  font-family: "Kaisei Decol", serif;
+}
+
+.coment {
+  font-size: 15px;
+}
+
+.Top-img {
+  width: 30%;
+  height: 30%;
+  margin: -20px;
+}
+
+.Top-img-02 {
+  width: 30%;
+  height: 30%;
+  margin: -20px;
+}
+
+.Top-img-03 {
+  width: 30%;
+  height: 30%;
+  margin: -20px;
+}
+
+.Top-img-04 {
+  width: 30%;
+  height: 30%;
+  margin: -20px;
+}
+
+.Top-img-05 {
+  width: 30%;
+  height: 30%;
+  margin: -20px;
+}
+
+.card {
+  font-size: 20px;
+}
+
+.read-the-docs {
+  color: #888;
+  font-size: 25px;
+}
+
+.hidden {
+  display: none;
+}
