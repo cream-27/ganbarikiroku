@@ -20,6 +20,12 @@ body {
   margin: 0 2em;
 }
 
+.random-message {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "Kaisei Decol", serif;
+}
+
 .message {
   font-weight: 400;
   font-size: 25px;
@@ -33,7 +39,7 @@ body {
 .Top-img {
   width: 30%;
   height: 30%;
-  margin: -20px;
+  margin: 0px;
 }
 
 .Top-img-02 {

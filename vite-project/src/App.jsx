@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import "./message.jsx";
+import getRandomMessage from "./message";
 
 function App() {
   const [count, setCount] = useState(0);
+  const message = getRandomMessage();
 
   //えらいが5回貯まったら画像変更
   if (count >= 5) {
@@ -33,7 +34,7 @@ function App() {
       </div>
       <div>
         <h1>
-          <p className="message"></p>
+          <p className="random-message">{message}</p>
           <img
             id="nomalImg"
             className="Top-img"
