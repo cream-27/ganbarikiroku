@@ -24,6 +24,7 @@ body {
   font-weight: 400;
   font-size: 40px;
   font-family: "Kaisei Decol", serif;
+  padding: 10px 0;
 }
 
 .message {
@@ -68,6 +69,10 @@ body {
 
 .card {
   font-size: 20px;
+}
+
+.total-count {
+  font-size: 15px;
 }
 
 .sub-message {

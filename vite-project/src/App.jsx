@@ -1,10 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import getRandomMessage from "./message";
 
 function App() {
   const [count, setCount] = useState(0);
-  const message = getRandomMessage();
+  //ボタンを押した回数を保存するための状態管理
+  const [dailyCount, setDailyCount] = useState(0);
+  //今日の日付を取得
+  const today = new Date().toISOString().split("T")[0];
+
+  useEffect(() => {
+    //localstorageから保存されたデータを取得
+    const savedCount = parseInt(localStorage.getItem("count")) || 0;
+    const savedDate = localStorage.getItem("date");
+
+    //日付が変わっていなければカウントを設定、変わっていればリセット
+    if (savedDate === today) {
+      setCount(savedCount);
+      setDailyCount(savedCount);
+    } else {
+      localStorage.setItem("date", today);
+      localStorage.setItem("count", 0);
+    }
+  }, [today]);
+
+  //カウントを増やす
+  const increment = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+    setDailyCount(newCount);
+    localStorage.setItem("count", newCount);
+  };
+
+  //メッセージ関数
+  const message = getRandomMessage("");
 
   //えらいが5回貯まったら画像変更
   if (count >= 5) {
@@ -31,10 +60,10 @@ function App() {
     <>
       <div>
         <p className="title">がんばりキロク</p>
+        <h1 className="random-message">{message}</h1>
       </div>
       <div>
-        <h1>
-          <p className="random-message">{message}</p>
+        <div>
           <img
             id="nomalImg"
             className="Top-img"
@@ -65,13 +94,14 @@ function App() {
             src="https://yuruisekai.whatshallwedotoday.net/wp-content/uploads/2022/07/yuruisekai_illustration98.jpg"
             alt="感謝くまさん"
           ></img>
-        </h1>
+        </div>
       </div>
       <div className="card">
         <p className="message">自分を褒めてあげよう！</p>
-        <button onClick={() => setCount((count) => count + 1)}>
-          えらい {count}
-        </button>
+        <button onClick={increment}>えらい {count}</button>
+        <h2 className="total-count">
+          今日のえらい{String(dailyCount).padStart(6, "0")}個
+        </h2>
       </div>
       <p className="sub-message">今日もお疲れ様でした。</p>
     </>
