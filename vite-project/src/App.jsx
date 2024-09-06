@@ -32,9 +32,6 @@ function App() {
     localStorage.setItem("count", newCount);
   };
 
-  //メッセージ関数
-  const message = getRandomMessage("");
-
   //えらいが5回貯まったら画像変更
   if (count >= 5) {
     nomalImg.classList.add("hidden");
@@ -56,11 +53,14 @@ function App() {
     Img05.classList.remove("hidden");
   }
 
+  // //メッセージ関数
+  const message = getRandomMessage();
+
   return (
     <>
       <div>
         <p className="title">がんばりキロク</p>
-        <h1 className="random-message">{message}</h1>
+        <h1 className="random-message">今日も{message}</h1>
       </div>
       <div>
         <div>
@@ -99,9 +99,7 @@ function App() {
       <div className="card">
         <p className="message">自分を褒めてあげよう！</p>
         <button onClick={increment}>えらい {count}</button>
-        <h2 className="total-count">
-          今日のえらい{String(dailyCount).padStart(6, "0")}個
-        </h2>
+        <h2 className="total-count">{String(dailyCount).padStart(6, "0")}</h2>
       </div>
       <p className="sub-message">今日もお疲れ様でした。</p>
     </>

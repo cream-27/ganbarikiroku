@@ -2,14 +2,14 @@ import React from "react";
 
 function RandomMessage() {
   const messages = [
-    "今日もえらい！",
+    "えらい！",
     "さすがすぎる！！！",
-    "ご褒美にケーキ食べようね！",
-    "今日も１００点！！！！",
-    "たくさん食べても０カロリー",
-    "今日もがんばってえらい！",
+    "ご褒美あげようね！",
+    "１００点！！！！",
+    "たくさん食べても０カロリー♩",
+    "がんばってえらい！",
     "１日乗り越えてえらすぎる〜！",
-    "一旦休むのも、アリ！！！",
+    "休むのも、アリ！！！",
     "自分にはなまるあげようね〜",
     "アイストリプルにしちゃお",
   ];
@@ -37,6 +37,10 @@ function RandomMessage() {
   const getRandomMessage = randomIndices.map((index) => messages[index]);
 
   console.log(getRandomMessage);
+
+  const randomIndex = Math.floor(Math.random() * messages.length);
+
+  return messages[randomIndex]; // randomIndexを使用してメッセージを返す
 }
 
 export default RandomMessage;

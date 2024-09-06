@@ -22,7 +22,7 @@ body {
 
 .random-message {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 20px;
   font-family: "Kaisei Decol", serif;
   padding: 10px 0;
 }
@@ -40,31 +40,36 @@ body {
 .Top-img {
   width: 30%;
   height: 30%;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .Top-img-02 {
   width: 30%;
   height: 30%;
-  margin: -20px;
+  margin: 0;
+  padding: 0;
 }
 
 .Top-img-03 {
   width: 30%;
   height: 30%;
-  margin: -20px;
+  margin: 0;
+  padding: 0;
 }
 
 .Top-img-04 {
   width: 30%;
   height: 30%;
-  margin: -20px;
+  margin: 0;
+  padding: 0;
 }
 
 .Top-img-05 {
   width: 30%;
   height: 30%;
-  margin: -20px;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
